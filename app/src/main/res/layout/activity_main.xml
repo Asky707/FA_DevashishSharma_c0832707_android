@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.fa_devashish_c0832707.MainActivity"
+    android:orientation="vertical">
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+        <LinearLayout
+            android:orientation="horizontal" android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp">
+
+
+
+            <Button
+                android:id="@+id/btn_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/buttton_default"
+                android:fontFamily="sans-serif-black"
+                android:onClick="btnClick"
+                android:text="Clear"
+                android:textColor="#5D4037" />
+
+            <Button
+                android:id="@+id/btn_getlocatiomn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/buttton_default"
+                android:onClick="btnClick"
+                android:text="Current Location"
+                android:textColor="#5D4037" />
+
+            <Button
+                android:id="@+id/btn_restaurants"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/buttton_default"
+                android:onClick="btnClick"
+                android:text="Parks"
+                android:textColor="#5D4037" />
+
+            <Button
+                android:id="@+id/btn_museum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/buttton_default"
+                android:onClick="btnClick"
+                android:text="Museums"
+                android:textColor="#5D4037" />
+
+            <Button
+                android:id="@+id/btn_library"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/buttton_default"
+                android:onClick="btnClick"
+                android:text="Pharmacy"
+                android:textColor="#5D4037" />
+
+            <Button
+                android:id="@+id/btn_school"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/buttton_default"
+                android:onClick="btnClick"
+                android:text="Schools"
+                android:textColor="#5D4037" />
+
+            <Button
+                android:id="@+id/btn_cafe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/buttton_default"
+                android:onClick="btnClick"
+                android:text="Cafe's"
+                android:textColor="#5D4037" />
+
+            <Button
+                android:id="@+id/btn_hospital"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/buttton_default"
+                android:onClick="btnClick"
+                android:text="Hospital"
+                android:textColor="#5D4037" />
+
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:orientation="horizontal" android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <ImageButton
+            android:id="@+id/btn_Fav_place"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/buttton_default"
+            android:onClick="btnClick"
+            android:src="@android:drawable/ic_menu_myplaces"
+            android:text="Get Direction"
+            android:textColor="#E91E63"
+            android:tint="#212121" />
+    </LinearLayout>
+</LinearLayout>
