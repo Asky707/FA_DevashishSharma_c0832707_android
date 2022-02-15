@@ -25,7 +25,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
-import com.example.fa_devashish_c0832707.R;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationCallback;
 import com.google.android.gms.location.LocationRequest;
@@ -52,7 +51,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     GoogleMap mMap;
     double lat, longi, dest_lat, dest_long;
-    final int radious = 1000;
+    final int radius = 1000;
     List<Address> addresses;
     String address;
     boolean isOk;
@@ -60,6 +59,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     Location location;
     boolean isMrkerClick = false;
     Marker mMarker;
+
 
     DatabaseHelper mDatabase;
     //get user lopcation
@@ -229,14 +229,14 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         GetNearPlaces getNearByPlaceData = new GetNearPlaces(this);
         switch (view.getId()) {
 
-            case R.id.btn_restaurants:
+            case R.id.btn_parks:
                 mMap.clear();
                 url = getUrl(lat, longi, "restaurant");
                 dataTransfer[0] = mMap;
                 dataTransfer[1] = url;
                 dataTransfer[2] = "resturent";
                 getNearByPlaceData.execute(dataTransfer);
-                Toast.makeText(this, "restaurant", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "parks", Toast.LENGTH_SHORT).show();
                 break;
 
             case R.id.btn_museum:
@@ -312,25 +312,21 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                 startActivity(intent);
                 break;
 
-           /* case R.id.btn_direction:
-                Intent intent2 = new Intent(this, DurationAndDistance.class);
-                intent2.putExtra("isMain",true);
-                startActivity(intent2);
-                break;*/
+
 
         }
     }
     private String getUrl(double latitude, double longitude, String nearbyPlace) {
         StringBuilder googlePlaceUrl = new StringBuilder("https://maps.googleapis.com/maps/api/place/nearbysearch/json?");
         googlePlaceUrl.append("location=" + latitude + "," + longitude);
-        googlePlaceUrl.append("&radius=" + radious);
+        googlePlaceUrl.append("&radius=" + radius);
         googlePlaceUrl.append("&type=" + nearbyPlace);
         googlePlaceUrl.append("&key=" + getString(R.string.api_key_places));
         Log.d("", "getUrl: "+googlePlaceUrl);
         return googlePlaceUrl.toString();
 
     }
-    private void setHomeMarker() {
+    private void setHomeMarker() {                      //Setting up the user location
         locationCallback = new LocationCallback() {
             // @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
             @Override
