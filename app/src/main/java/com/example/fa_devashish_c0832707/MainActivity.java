@@ -230,7 +230,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         switch (view.getId()) {
 
             case R.id.btn_parks:
-                mMap.clear();
+                mMap.clear();                           //button for parks
                 url = getUrl(lat, longi, "restaurant");
                 dataTransfer[0] = mMap;
                 dataTransfer[1] = url;
@@ -239,7 +239,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                 Toast.makeText(this, "parks", Toast.LENGTH_SHORT).show();
                 break;
 
-            case R.id.btn_museum:
+            case R.id.btn_museum:                       //button for museum
                 mMap.clear();
                 url = getUrl(lat, longi, "museum");
                 dataTransfer[0] = mMap;
@@ -250,7 +250,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                 break;
 
             case R.id.btn_cafe:
-                mMap.clear();
+                mMap.clear();                           //button for cafe
                 url = getUrl(lat, longi, "cafe");
                 dataTransfer[0] = mMap;
                 dataTransfer[1] = url;
@@ -260,7 +260,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                 break;
 
             case R.id.btn_library:
-                mMap.clear();
+                mMap.clear();                           //button for library
                 url = getUrl(lat, longi, "library");
                 dataTransfer[0] = mMap;
                 dataTransfer[1] = url;
@@ -269,7 +269,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                 Toast.makeText(this, "library", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.btn_school:
-                mMap.clear();
+                mMap.clear();                           //button for schools
                 url = getUrl(lat, longi, "school");
                 dataTransfer[0] = mMap;
                 dataTransfer[1] = url;
@@ -278,7 +278,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                 Toast.makeText(this, "Schools", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.btn_hospital:
-                mMap.clear();
+                mMap.clear();                           //button for hospitals
                 url = getUrl(lat, longi, "hospital");
                 dataTransfer[0] = mMap;
                 dataTransfer[1] = url;
@@ -306,7 +306,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                 break;
 
 
-            case R.id.btn_Fav_place:
+            case R.id.btn_Fav_place:                            //button for favourite places
 
                 Intent intent = new Intent(this, FavPlaces.class);
                 startActivity(intent);
