@@ -113,6 +113,61 @@
         android:layout_weight="1" />
 
 
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+        <LinearLayout
+            android:orientation="horizontal" android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp">
+
+
+            <Button
+                android:id="@+id/hybrid_map"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/buttton_default"
+                android:fontFamily="sans-serif-black"
+                android:onClick="changeMapHybrid"
+                android:text="Hybrid"
+                android:textColor="#E91E63" />
+
+            <Button
+                android:id="@+id/normal_map"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/buttton_default"
+                android:onClick="changeMapNormal"
+                android:text="Normal"
+                android:textColor="#E91E63" />
+
+            <Button
+                android:id="@+id/satellite_map"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/buttton_default"
+                android:onClick="changeMapSatellite"
+                android:text="Satellite"
+                android:textColor="#E91E63" />
+
+            <Button
+                android:id="@+id/terrain_map"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/buttton_default"
+                android:onClick="changeMapTerrain"
+                android:text="Terrain"
+                android:textColor="#E91E63" />
+        </LinearLayout>
+    </HorizontalScrollView>
     <LinearLayout
         android:orientation="horizontal" android:layout_width="match_parent"
         android:layout_height="wrap_content"

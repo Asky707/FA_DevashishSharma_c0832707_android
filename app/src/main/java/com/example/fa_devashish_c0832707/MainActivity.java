@@ -59,6 +59,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     Location location;
     boolean isMrkerClick = false;
     Marker mMarker;
+    int mapType = 1;
 
 
     DatabaseHelper mDatabase;
@@ -128,6 +129,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
+        googleMap.setMapType(mapType);                  //switch the map type
         mMap = googleMap;
 
         mMap.setOnMapLongClickListener(new GoogleMap.OnMapLongClickListener() {
@@ -341,38 +343,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         };
     }
 
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        switch (item.getItemId()) {
-//            case R.id.maptypeHYBRID:
-//                if (mMap != null) {
-//                    mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
-//                    return true;
-//                }
-//            case R.id.maptypeNONE:
-//                if (mMap != null) {
-//                    mMap.setMapType(GoogleMap.MAP_TYPE_NONE);
-//                    return true;
-//                }
-//            case R.id.maptypeNORMAL:
-//                if (mMap != null) {
-//                    mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
-//                    return true;
-//                }
-//            case R.id.maptypeSATELLITE:
-//                if (mMap != null) {
-//                    mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
-//                    return true;
-//                }
-//            case R.id.maptypeTERRAIN:
-//                if (mMap != null) {
-//                    mMap.setMapType(GoogleMap.MAP_TYPE_TERRAIN);
-//                    return true;
-//                }
-//                return true;
-//        }
-//        return super.onOptionsItemSelected(item);
-//    }
+
     private void loadPlaces() {
         Cursor cursor = mDatabase.getAllPlace();
         if (cursor.moveToFirst()) {
@@ -415,5 +386,30 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
         AlertDialog alert11 = builder1.create();
         alert11.show();
+    }
+    public void changeMapTerrain(View view) {
+        mapType = GoogleMap.MAP_TYPE_TERRAIN;                       //Map type = Terrain
+        initMap();
+
+    }
+
+    public void changeMapSatellite(View view) {
+        mapType = GoogleMap.MAP_TYPE_SATELLITE;                     //Map type = Satellite
+        initMap();
+
+
+    }
+
+    public void changeMapNormal(View view) {
+        mapType = GoogleMap.MAP_TYPE_NORMAL;                        //Map type = Normal
+        initMap();
+
+
+    }
+
+    public void changeMapHybrid(View view) {
+        mapType = GoogleMap.MAP_TYPE_HYBRID;                        //Map type = Hybrid
+        initMap();
+
     }
 }

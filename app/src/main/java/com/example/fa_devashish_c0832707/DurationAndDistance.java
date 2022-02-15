@@ -50,7 +50,7 @@ import java.util.List;
 public class DurationAndDistance extends AppCompatActivity implements OnMapReadyCallback, Serializable {
     GoogleMap mMap;
     double lat, longi, dest_lat, dest_long;
-    final int radious = 1000;
+    final int radius = 1000;
     boolean isclicked = false;
     Location homelocation;
     List<Location> points;
