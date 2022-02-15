@@ -1,9 +1,9 @@
 package com.example.fa_devashish_c0832707;
 
 public class FavouritePlace {
-
+                                                    //Class for favourite place selection
     int id;
-    String placeName;
+    String pname;
     String address;
     String date;
     Double latitude;
@@ -11,9 +11,9 @@ public class FavouritePlace {
     int hasVisited;
 
 
-    public FavouritePlace(int id, String placeName, String address, String date, Double latitude, Double longitude, int hasVisited) {
+    public FavouritePlace(int id, String pname, String address, String date, Double latitude, Double longitude, int hasVisited) {
         this.id = id;
-        this.placeName = placeName;
+        this.pname = pname;
         this.address = address;
         this.date = date;
         this.latitude = latitude;
@@ -29,12 +29,12 @@ public class FavouritePlace {
         this.id = id;
     }
 
-    public String getPlaceName() {
-        return placeName;
+    public String getPname() {
+        return pname;
     }
 
-    public void setPlaceName(String placeName) {
-        this.placeName = placeName;
+    public void setPname(String pname) {
+        this.pname = pname;
     }
 
     public String getAddress() {

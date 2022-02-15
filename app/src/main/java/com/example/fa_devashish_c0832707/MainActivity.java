@@ -88,11 +88,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     }
 
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        getMenuInflater().inflate(R.menu.map_type, menu);
-//        return super.onCreateOptionsMenu(menu);
-//    }
+
 
 
     @Override

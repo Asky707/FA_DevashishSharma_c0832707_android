@@ -39,7 +39,7 @@ public class FavPlaceAdapter extends ArrayAdapter {
         if (place.hasVisited == 1){
             // name.setBackgroundColor(Color.CYAN);
         }
-        name.setText(place.getPlaceName());
+        name.setText(place.getPname());
         address.setText(place.getAddress());
         date.setText(place.getDate());
         if (place.hasVisited == 1){
